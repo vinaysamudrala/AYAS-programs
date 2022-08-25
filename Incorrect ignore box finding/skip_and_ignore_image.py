@@ -1,7 +1,7 @@
 from xml.dom import minidom
 import os
-#file_name = str(os.listdir()[0])
-file_name='4_77bc58f6-253d-4199-920d-2b868d1e0edb.zip (4).xml'
+file_name = str(os.listdir()[0])
+#file_name='4_77bc58f6-253d-4199-920d-2b868d1e0edb.zip (4).xml'
 doc = minidom.parse(file_name)
 idnos = doc.getElementsByTagName("box")
 idno = doc.getElementsByTagName("image")

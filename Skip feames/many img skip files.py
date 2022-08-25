@@ -27,4 +27,3 @@ for x in os.listdir():
         f.write('Number of frames 1 to'+ str(Last_frame) + '\n' )
         f.write("skipped frames - " + diff+ '\n')
         f.write('Total number of frames skipped - ' + x + '\n')
-        
