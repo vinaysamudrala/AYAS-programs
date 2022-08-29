@@ -25,7 +25,6 @@ for fldr in md:                     # walks in each folder
                 xc = zip_file.namelist()
                 for fv in xc:
                     if ".xml" in fv:  #finds if their are any XML files in ZIP File
-                        xlfil.write(str(fv[:-4])+",")
                         pr=zip_file.getinfo(str(fv))
                         fs= int((int(pr.file_size))/1024)
                         print(fs)
@@ -53,7 +52,7 @@ for fn in xml_list:
                     list_of_errors.append(xx.attrib['id'])
             except:
                 continue
-    xlfil.write(str(fn)+",")
+    xlfil.write(str(fn[-40:-4])+",")
     for er in list_of_errors:
         xlfil.write(str(er)+",")
     xlfil.write("\n")
